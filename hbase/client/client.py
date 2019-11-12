@@ -127,7 +127,7 @@ class ColumnFamilyAttributes(dict):
 
 class Client(object):
 
-    def __init__(self, zkquorum, zk_master_path=None, zk_region_path=None):
+    def __init__(self, zkquorum):
         """HBase client.
 
         Args:
@@ -142,8 +142,8 @@ class Client(object):
         """
         self._zkquorum = zkquorum
 
-        self._master_service = services.MasterService(zkquorum, zk_master_path)
-        self._region_manager = _region.RegionManager(zkquorum, zk_region_path)
+        self._master_service = services.MasterService(zkquorum)
+        self._region_manager = _region.RegionManager(zkquorum)
 
     def __enter__(self):
         return self
@@ -750,6 +750,7 @@ class Client(object):
             NoSuchZookeeperNodeError
 
         """
+        table = table.replace('default:','')
         region = self._region_manager.get_region(table, key)
         region_service = self._region_manager.get_service(region)
 
