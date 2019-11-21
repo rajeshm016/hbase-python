@@ -905,6 +905,7 @@ class Client(object):
 
         """
         key = row.key
+        table = table.replace('default:','')
         region = self._region_manager.get_region(table, key)
         region_service = self._region_manager.get_service(region)
         # print('DEBUG: Get region\n%s' % repr(region))
