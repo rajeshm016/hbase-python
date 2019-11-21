@@ -43,6 +43,7 @@ Defaults:
 
    num_tasks_per_conn = 500
 
+PS: Make sure to build and install the package again after changing these values
 
 Examples
 --------
