@@ -43,7 +43,7 @@ Defaults:
 
    num_tasks_per_conn = 500
 
-PS: Make sure to build and install the package again after changing these values
+PS: Make sure to build and install the package again after changing these values or this can edited in the installed site-packages of python directly.
 
 Examples
 --------
