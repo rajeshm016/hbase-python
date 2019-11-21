@@ -29,6 +29,21 @@ Now .whl would be generated in the dist/ directory. To install it run:
 
      pip3 install dist/hbase_python-0.5-py3-none-any.whl
 
+Installation
+------------
+
+
+Tweak these values as per your needs in *hbase/conf.py*
+
+Defaults: 
+
+.. code-block:: bash
+   
+   num_threads_per_conn = 10
+
+   num_tasks_per_conn = 500
+
+
 Examples
 --------
 
