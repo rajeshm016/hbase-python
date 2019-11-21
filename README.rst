@@ -1,32 +1,33 @@
 hbase-python
 ^^^^^^^^^^^^
 
-(The development of this package has not finished.)
-
 hbase-python is a python package used to work HBase.
 
-It is now tested under HBase 1.2.6.
-
-Before using HBase, we are familiar with MongoDB and pymongo.
-While, when coming to HBase, we found it is not easy to access the database via python.
-So, I spent some days to start this project and hope it can be helpful to our daily research work.
-The thought of this package comes from "happybase" and "starbase", and I am trying to make the API behaves like
-"pymongo".
 
 Dependencies
 ------------
 
 * Python 3.4+
 * requests
+* kazoo
+* protobuf
 
 Installation
 ------------
 
-The package can be installed from PyPI repository:
+STEPS:
+
+Run this command from the directory where setup.py is located:
 
 .. code-block:: bash
 
-    pip3 install hbase-python
+    python3 setup.py bdist_wheel
+
+Now .whl would be generated in the dist/ directory. To install it run:
+
+.. code-block:: bash
+
+     pip3 install dist/hbase_python-0.5-py3-none-any.whl
 
 Examples
 --------
