@@ -29,7 +29,7 @@ Now .whl would be generated in the dist/ directory. To install it run:
 
      pip3 install dist/hbase_python-0.5-py3-none-any.whl
 
-Installation
+Configuration
 ------------
 
 
